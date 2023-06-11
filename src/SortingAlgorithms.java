@@ -1,27 +1,25 @@
 public class SortingAlgorithms {
     public SortingAlgorithms() {}
     public int[] bubbleSort(int[] numbers) {
-        int[] sortedNumbers = numbers;
-
-        for (int i = 0; i < sortedNumbers.length - 1; i++) {
-            for (int j = 0; j < sortedNumbers.length - 1; j++) {
-                if (j + 1 > sortedNumbers.length) {
+        for (int i = 0; i < numbers.length - 1; i++) {
+            for (int j = 0; j < numbers.length - 1; j++) {
+                if (j + 1 > numbers.length) {
                     System.out.println("j + 1 is greater than the length of the array");
                     break;
-                } else if (sortedNumbers[j] > sortedNumbers[j + 1]) {
+                } else if (numbers[j] > numbers[j + 1]) {
                     /*
-                    int temporary = sortedNumbers[j];
-                    sortedNumbers[j] = sortedNumbers[j + 1];
-                    sortedNumbers[j + 1] = temporary;
+                    int temporary = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temporary;
                      */
 
-                    swapElements(sortedNumbers, j, j + 1);
+                    swapElements(numbers, j, j + 1);
                 }
 
             }
         }
 
-        return sortedNumbers;
+        return numbers;
     }
 
 
